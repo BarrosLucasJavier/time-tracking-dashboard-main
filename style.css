@@ -72,6 +72,9 @@ body{
     cursor: pointer;
     color: white;
 }
+.activeState{
+    color: white;
+}
 /* Section */
 .sectionContainer{
     background-repeat: no-repeat;
@@ -112,6 +115,10 @@ body{
     height: 119px;
     padding: 1rem 1.5rem;
 }
+.dataContainer:hover{
+    background-color: #34397B;
+    cursor: pointer;
+}
 .typeContainer{
     display: flex;
     justify-content: space-between;
@@ -126,6 +133,10 @@ body{
     font-size: 2rem;
     color: var(--paleBlue);
 }
+.typeContainer p:hover{
+    cursor: pointer;
+    color: white;
+}
 .hoursContainer{
     display: flex;
     justify-content: space-between;
@@ -139,4 +150,58 @@ body{
     color: var(--paleBlue);
     font-size: 0.9rem;
     font-weight: 300;
+}
+/* Media Queries */
+
+@media screen and (min-width:1100px) {
+    /* Main */
+    .mainContainer{
+        display: grid;
+        grid-template-rows: repeat(2, 245px);
+        grid-template-columns: repeat(4, 256px);
+        justify-content: center;
+        align-content: center;
+        min-height: 100vh;
+        gap: 1.5rem;
+    }
+    /* Header */
+    header{
+        grid-row: span 2;
+        grid-column: span 1;
+    }
+    .optionContainer{
+        padding: 1.5rem;
+        flex-direction: column;
+        gap: 1.4rem;
+    }
+    .userContainer{
+        padding: 2rem;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 2.3rem;
+    }
+    .avatarContainer img{
+        width: 82px;
+    }
+    .reportContainer h1{
+        margin-bottom: 3.5rem;
+        font-size: 2.4rem;
+    }
+    /* Section */
+    .sectionContainer{
+        height:245px ;
+    }
+    .dataContainer{
+        height: 192px;
+    }
+    .hoursContainer{
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: start;
+    }
+    .hoursContainer h2{
+        margin-top: 1rem;
+        font-size: 3.2rem;
+    }
 }

@@ -26,10 +26,19 @@ valueLoad('daily');
 /* Listener Options */
 daily.addEventListener('click', ()=>{
     valueLoad('daily');
+    daily.classList.add('activeState');
+    weekly.classList.remove('activeState');
+    monthly.classList.remove('activeState');
 })
 weekly.addEventListener('click', ()=>{
     valueLoad('weekly');
+    daily.classList.remove('activeState');
+    weekly.classList.add('activeState');
+    monthly.classList.remove('activeState');
 })
 monthly.addEventListener('click', ()=>{
     valueLoad('monthly');
+    daily.classList.remove('activeState');
+    weekly.classList.remove('activeState');
+    monthly.classList.add('activeState');
 })
